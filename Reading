@@ -1,0 +1,79 @@
+# RAG Mastery Map — August 2025
+
+**Purpose:** Quick-reference guide for Retrieval-Augmented Generation (RAG) concepts, evolution, and frontier directions.
+
+---
+
+## 1. Parametric vs Retrieval-Augmented Models
+- **Parametric LM:** Knowledge stored in weights, fixed after training.  
+  Examples: GPT, BERT, T5 (no external lookup).
+- **Limitations:** Static, no provenance, prone to hallucinations.
+- **Retrieval-Augmented Generation (RAG):** Combines parametric LM + external non-parametric memory.
+
+---
+
+## 2. Original RAG (Meta AI, 2020)
+- Components:
+  - **Retriever:** Dense Passage Retrieval (DPR) → Wikipedia index.
+  - **Generator:** Seq2Seq LM (BART).
+- Modes:
+  - **RAG-Sequence:** Same retrieved docs for whole output.
+  - **RAG-Token:** Retrieves per token.
+- Advantages: Updatable KB, factual grounding, source citations.
+
+---
+
+## 3. RAG Family Tree (2020 → 2025)
+1. **2020:** Original RAG.
+2. **2021:** Hybrid retrieval (dense + sparse).
+3. **2022:** Multi-hop RAG.
+4. **2023:** Agent frameworks (LangChain, LlamaIndex).
+5. **2024:** RAG+ variants:
+   - Self-RAG → retrieval on demand + self-critique.
+   - HyDE → hypothetical document retrieval.
+   - Graph-RAG → knowledge graph retrieval.
+   - Multi-modal RAG → cross text, image, audio, video.
+6. **2025:** Retrieval orchestration inside reasoning engines.
+   - Streaming RAG → live KB updates.
+   - Generative Indexing → compressed KBs.
+   - Meta-Retrieval → strategy selection per query.
+
+---
+
+## 4. Frontier Directions (2025+)
+- **Self-RAG:** Dynamic retrieval triggers.
+- **Graph-RAG:** Relational reasoning over entities/facts.
+- **Streaming RAG:** Near-real-time ingestion.
+- **Multi-modal RAG:** Unified cross-modal grounding.
+- **Generative Indexing:** Rewrite KB into ultra-dense embeddings.
+- **Plan-and-Retrieve:** Retrieval at multiple reasoning steps.
+
+---
+
+## 5. How Frontier Labs Use RAG Now
+- **OpenAI GPT-o1 / GPT-5:** Retrieval embedded in hidden planning steps, dynamic multi-source KBs.
+- **DeepMind Gemini 1.5:** Multi-modal retrieval + generative indexing at scale.
+- **Meta LLaMA + Self-RAG:** Token-level retrieval triggers, open-sourced pipelines.
+
+---
+
+## 6. Resume-Worthy Project Ideas
+- **Multi-modal Streaming Graph-RAG** with adaptive orchestration.
+- **Self-improving retrieval:** Retriever retrains from generator feedback.
+- **Cross-modal multi-hop reasoning**: Chain text→chart→image in one answer.
+- **Ultra-low-latency retrieval**: <100ms on billion+ chunk KBs.
+- Include:
+  - Ablation studies
+  - Benchmarks vs baseline RAG & Self-RAG
+  - Live demo + write-up
+
+---
+
+## 7. Key Takeaways
+- RAG is now an *operator*, not the whole architecture.
+- Real innovation = how retrieval is orchestrated, combined, and optimized.
+- Lab-level advantage = solving bottlenecks in retrieval accuracy, latency, and modality fusion.
+
+---
+
+**Last updated:** August 2025
